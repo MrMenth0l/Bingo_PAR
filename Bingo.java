@@ -58,4 +58,7 @@ public class Bingo {
     public int getNum2() {return num2;}
     public int getNum3() {return num3;}
     public double getGanacias(){return ganacias;}
+
+    public void setCosto(int costo) {Costo = costo;}
+    public int getCosto() {return Costo;}
 }

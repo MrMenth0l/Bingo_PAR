@@ -48,6 +48,7 @@ public class Main {
                     return;
                 default:
                     System.out.println("Ingrese 1 o 2 como opcion para seguir.");
+                    break;
             }
         }
     }

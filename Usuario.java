@@ -22,7 +22,6 @@ public class Usuario
     public void setDebe(boolean debe) {this.debe = debe;}
     public boolean isDebe() {return debe;}
 
-    public double getSaldodlr() {
-        return saldo/8;
-    }
+    public double getSaldodlr() {return saldo/8;}
+
 }
