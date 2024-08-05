@@ -29,7 +29,7 @@ public class Main {
                                     System.out.println("Ha ganado: " + df.format(juego.getGanacias()) + "Q\n Su saldo se encuentra en: " + df.format(jugador.getSaldo()) + "Q (Quetzales) " + df.format(jugador.getSaldodlr()) + "$ (Dolares, cambio de 8Q:1$)");
                                 } else if (juego.isValid()) {
                                     System.out.println("Sus numeros son" + "\n" + juego.getNum1() + "\n" + juego.getNum2() + "\n" + juego.getNum3() + "\nGracias por su participacion");
-                                } else System.out.println("No tiene fondos suficientes");
+                                } else {System.out.println("No tiene fondos suficientes"); jugador.setSaldo(0);}
                                 break;
                             case 2:
                                 System.out.println("Cuanto desea ingresar?");
