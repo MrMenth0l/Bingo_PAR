@@ -40,13 +40,27 @@ public class Bingo {
         }else{ganacias = 0;}
 
     }
+
+    private void resultados(int num1, int num2, int num3){
+        if (num1>700 && num2>700 && num3>700){
+            ganacias = ((num1+num2+num3)*0.1);
+        } else if (num1>500 && num1<700 && num2>500 && num2<700 && num3>500 && num3<700) {
+            ganacias =  ((num1+num2+num3)*0.2);
+        } else if (num1 > 500 || num2 > 500 || num3>500){
+            ganacias =  ((num1+num2+num3)*0.15);
+        } else if (num1<500 && num2<500 && num3<500) {
+            ganacias =  ((num1+num2+num3)*0.25);
+        }else{ganacias = 0;}
+
+    }
     public boolean isEven(int num){
         return (num % 2==0);
     }
     public void jugar()
     {
         jugador.setSaldo(jugador.getSaldo()-12);
-        if(isEven(num1)&&isEven(num2)){resultados(num1,num2);jugador.setSaldo(jugador.getSaldo()+ganacias); setWinner(true);}
+        if (isEven(num1)&&isEven(num2)&&isEven(num3)){resultados(num1,num2,num3);jugador.setSaldo(jugador.getSaldo()+ganacias); setWinner(true);}
+        else if(isEven(num1)&&isEven(num2)){resultados(num1,num2);jugador.setSaldo(jugador.getSaldo()+ganacias); setWinner(true);}
         else if (isEven(num1)&&isEven(num3)){resultados(num1,num3);jugador.setSaldo(jugador.getSaldo()+ganacias); setWinner(true);}
         else if (isEven(num2)&&isEven(num3)){resultados(num2,num3); jugador.setSaldo(jugador.getSaldo()+ganacias); setWinner(true);}
         else  setWinner(false);;

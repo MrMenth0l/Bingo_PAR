@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);while (true)
-        {System.out.println("BIENVENIDO AL BINGO PAR-DE-CUATES"
-                    + "\nIngresar: "+ "\n1. Si"+ "\n2. NO");
+        {System.out.println("BIENVENIDO AL BINGO PAR-DE-CUATES" + "\nIngresar: "+ "\n1. Si"+ "\n2. NO");
             int opc = sc.nextInt();
             switch (opc){
                 case 1:
